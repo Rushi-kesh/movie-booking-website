@@ -1,0 +1,36 @@
+.bookShow {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.back {
+    cursor: pointer;
+}
+.body{
+    padding-top:60px
+}
+.cardStyle {
+    width: 580px;
+    margin: auto;
+    text-align: center;
+}
+
+.formControl {
+    width: 400px;
+}
+
+.marginTop16 {
+    margin-top: 16px;
+}
+
+.dispNone {
+    display: none;
+}
+
+.dispBlock {
+    display: block;
+}
+
+.red {
+    color: red;
+}
