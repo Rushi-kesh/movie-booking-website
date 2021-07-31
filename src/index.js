@@ -38,7 +38,7 @@ app.use(function(req, res, next) {
   next();
 });
 // ** MIDDLEWARE ** //
-const whitelist = ['http://localhost:3000', 'http://localhost:8080']
+const whitelist = ['http://localhost:3000', 'http://localhost:8080','https://movie-booking-rushi.herokuapp.com/']
 const corsOptions = {
   origin: function (origin, callback) {
     console.log("** Origin of request " + origin)
