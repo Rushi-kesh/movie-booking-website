@@ -14,7 +14,7 @@ const showsRouter = require('./routes/shows');
 
 const app = express();
 app.disable('x-powered-by');
-const port = process.env.PORT || 8080;
+const port = 8080;
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
