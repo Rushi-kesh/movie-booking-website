@@ -9,7 +9,7 @@ import { history } from '../../../../utils';
 const useStyles = makeStyles(theme => ({
   form: {
     margin:"50px 0px",
-    padding:"0px",
+    paddingLeft:"100px",
     textAlign:"center",
     align:"center",
   },

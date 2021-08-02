@@ -40,7 +40,7 @@ export default theme => ({
     display: 'flex',
     alignItems: 'center',
     margin:"0px 0px",
-    padding:"0px",
+    paddingLeft:"100px",
     textAlign:"center",
     align:"center",
     [theme.breakpoints.down('md')]: {
