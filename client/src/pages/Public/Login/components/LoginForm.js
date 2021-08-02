@@ -8,9 +8,10 @@ import { history } from '../../../../utils';
 
 const useStyles = makeStyles(theme => ({
   form: {
-    paddingLeft: '100px',
-    paddingBottom: '125px',
-    paddingTop: '125px',
+    margin:"50px 0px",
+    padding:"0px",
+    textAlign:"center",
+    align:"center",
   },
   title: {
     color: theme.palette.common.contrastText,

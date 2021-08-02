@@ -39,13 +39,17 @@ export default theme => ({
     flexGrow: 1,
     display: 'flex',
     alignItems: 'center',
+    margin:"0px 0px",
+    padding:"0px",
+    textAlign:"center",
+    align:"center",
     [theme.breakpoints.down('md')]: {
       justifyContent: 'center'
     }
   },
-  form: {
-    paddingLeft: '100px',
-  },
+  // form: {
+  //   paddingLeft: '100px',
+  // },
   title: {
     color: theme.palette.common.contrastText,
     marginTop: theme.spacing(3)
