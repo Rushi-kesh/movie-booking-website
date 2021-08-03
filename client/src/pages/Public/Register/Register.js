@@ -123,7 +123,7 @@ class Register extends Component {
 
                   <Typography className={classes.login} variant="body1">
                     Have an account?{' '}
-                    <Link className={classes.loginUrl} to="/login">
+                    <Link className={classes.loginUrl} to="/">
                       Login
                     </Link>
                   </Typography>
