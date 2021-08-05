@@ -10,27 +10,6 @@ import {
 import { setAlert } from './alert';
 import { setAuthHeaders, setUser, removeUser, isLoggedIn } from '../../utils';
 
-export const uploadImage = (id, image) => async dispatch => {
-  try {
-    const data = new FormData();
-    data.append('file', image);
-    const url =  '/users/photo/' + id;
-    const response = await fetch(url, {
-      method: 'POST',
-      body: data
-    });
-    const responseData = await response.json();
-    if (response.ok) {
-      dispatch(setAlert('Image Uploaded', 'success', 5000));
-    }
-    if (responseData.error) {
-      dispatch(setAlert(responseData.error.message, 'error', 5000));
-    }
-  } catch (error) {
-    dispatch(setAlert(error.message, 'error', 5000));
-  }
-};
-
 // Login user
 export const login = (username, password) => async dispatch => {
   try {

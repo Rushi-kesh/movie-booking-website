@@ -67,28 +67,6 @@ export default theme => ({
       marginTop: theme.spacing(2)
     }
   },
-  upload: {
-    width: '100%',
-    marginTop: theme.spacing(2)
-  },
-  policy: {
-    display: 'flex',
-    alignItems: 'center'
-  },
-  policyCheckbox: {
-    marginLeft: '-14px'
-  },
-  policyText: {
-    display: 'inline',
-    color: theme.palette.text.secondary
-  },
-  policyUrl: {
-    color: theme.palette.text.primary,
-    '&:hover': {
-      cursor: 'pointer',
-      color: theme.palette.primary.main
-    }
-  },
   progress: {
     display: 'block',
     marginTop: theme.spacing(2),

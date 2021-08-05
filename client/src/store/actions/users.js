@@ -97,31 +97,3 @@ export const updateUser = (user, id) => async dispatch => {
     };
   }
 };
-
-export const deleteUser = id => async dispatch => {
-  try {
-    const token = localStorage.getItem('jwtToken');
-    const url ='/users/' + id;
-    const response = await fetch(url, {
-      method: 'DELETE',
-      headers: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json'
-      }
-    });
-    const data = await response.json();
-    if (response.ok) {
-      dispatch(setAlert('User Deleted', 'success', 5000));
-      dispatch({ type: DELETE_USER, payload: id });
-      return { status: 'success', message: 'User Removed' };
-    } else {
-      throw new Error(data._message);
-    }
-  } catch (error) {
-    dispatch(setAlert(error.message, 'error', 5000));
-    return {
-      status: 'error',
-      message: ' User have not been deleted, try again.'
-    };
-  }
-};

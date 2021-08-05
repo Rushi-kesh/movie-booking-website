@@ -1,5 +1,4 @@
 const express = require('express');
-const upload = require('../utils/multer');
 const User = require('../models/user');
 const auth = require('../middlewares/auth');
 
@@ -19,26 +18,6 @@ router.post('/users', async (req, res) => {
   }
 });
 
-router.post('/users/photo/:id', upload('users').single('file'), async (req, res, next) => {
-  const url = `${req.protocol}://${req.get('host')}`;
-  const { file } = req;
-  const userId = req.params.id;
-  try {
-    if (!file) {
-      const error = new Error('Please upload a file');
-      error.httpStatusCode = 400;
-      return next(error);
-    }
-    const user = await User.findById(userId);
-    if (!user) return res.sendStatus(404);
-    user.imageurl = `${url}/${file.path}`;
-    await user.save();
-    res.send({ user, file });
-  } catch (e) {
-    console.log(e);
-    res.sendStatus(400).send(e);
-  }
-});
 
 // Login User
 router.post('/users/login', async (req, res) => {

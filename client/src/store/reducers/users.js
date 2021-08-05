@@ -66,11 +66,6 @@ const updateUser = (state, payload) => ({
   users: [...state.users.filter(user => user._id !== payload._id), payload]
 });
 
-const deleteUser = (state, payload) => ({
-  ...state,
-  users: state.users.filter(user => user._id !== payload),
-  selectedUsers: state.selectedUsers.filter(element => element !== payload)
-});
 
 export default (state = initialState, action) => {
   const { type, payload } = action;
@@ -88,8 +83,6 @@ export default (state = initialState, action) => {
       return addUser(state, payload);
     case UPDATE_USER:
       return updateUser(state, payload);
-    case DELETE_USER:
-      return deleteUser(state, payload);
     default:
       return state;
   }
